@@ -7,8 +7,7 @@ import Item from './components/Item'
 
 function App () {
   
-var [database,setDatabase] = useState({})
-var [index,setIndex] = useState(0)
+let [database,setDatabase] = useState({})
 
 
     let urlIDF = 'https://rickandmortyapi.com/api/character'
@@ -24,21 +23,6 @@ var [index,setIndex] = useState(0)
      
     return (
       <div className="App">
-{
-  for ( index; index < array.length; index++) {
-    const element = array[index];
-    
-  }
-}
-        
-          
-
-
-
-
-
-
-
 
         {/* <Item name={database.results[0].name} status={database.results[0].status} species={database.results[0].species}   />
       <p>{database.results[0].name}</p> */}
