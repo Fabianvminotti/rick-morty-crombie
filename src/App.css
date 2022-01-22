@@ -1,38 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  background-color:#FB6467FF ;
 }
 
-.App-link {
-  color: #61dafb;
+.App-items{
+  max-width: 900px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-container{
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  background-color: #FAE48BFF;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.item-container:hover {
+  background-color: #A6EEE6FF;
+}
+
+.item-name{
+  font-family: 'Creepster', cursive;
+  color: #526E2DFF;
+}
+
+.item-desc{
+  display: block;
+  font-family: 'Dongle', sans-serif;
+  font-size: 16pt;
+  color: #82491EFF
+}
+
+.item-img{
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.btn-seeMore{
+  font-family: 'Creepster', cursive;
+  background-color: #526E2DFF;
+  color:white;
+  font-size: 25pt;
+  border:none;
+  border-radius: 20px;
+  width: 250px;
+  height: 75px;
+  margin: 20px;
+  transition: 0.9s;
+  cursor: pointer;
+
+}
+
+.btn-seeMore:hover{
+background-color:#82491EFF ;
 }
