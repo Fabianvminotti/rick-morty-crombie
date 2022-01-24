@@ -63,3 +63,44 @@
 .btn-seeMore:hover{
 background-color:#82491EFF ;
 }
+
+
+.op-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  height: 75px;
+  margin: auto;
+  border-radius: 15px;
+  background-color:#526E2DFF ;
+
+}
+
+.op-select{
+  display: inline-block;
+  /* margin: 25px; */
+  font-family: 'Dongle', sans-serif;
+  color: white;
+  font-size: 20pt;
+}
+
+.op-select select{
+  font-family: 'Dongle', sans-serif;
+  font-size: 16pt;
+}
+
+.op-container button{
+  font-family: 'Creepster', cursive;
+  background-color: #526E2DFF;
+  color:white;
+  font-size: 15pt;
+  border:none;
+  border-radius: 20px;
+  width: 50px;
+  height: 20px;
+  /* margin: 5px; */
+  transition: 0.9s;
+  cursor: pointer;
+  margin-left: 25px;
+}

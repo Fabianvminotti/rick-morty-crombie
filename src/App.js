@@ -10,7 +10,7 @@ function App() {
 let databaseView =[]
   let [database, setDatabase] = useState([])
   let [lastIndex, setLastIndex] = useState(2)
-  let[firstURL,setFirstURL] = useState( 'https://rickandmortyapi.com/api/character')
+  let[url,setUrl] = useState( 'https://rickandmortyapi.com/api/character')
   //let firstURL = 'https://rickandmortyapi.com/api/character'
 
 
@@ -26,11 +26,24 @@ let databaseView =[]
   }
 
 
+  // useEffect(() => {
+  //   fectchAPI(url)
+  // }, []
+  // )
+
+
   useEffect(() => {
-    fectchAPI(firstURL)
+    filterItems("","")
   }, []
   )
 
+  const filterItems= (filterStatus,filterSpecies)=>{
+    let status = filterStatus!=""? `status=${filterStatus}&`: ""
+    let species = filterSpecies!=""? `species=${filterSpecies}`: ""
+    let newUrl = 'https://rickandmortyapi.com/api/character/?'+status+species
+    setUrl(newUrl)
+    fectchAPI(url)
+  }
   
 
   databaseView = database.slice(0,lastIndex+1)
@@ -39,7 +52,7 @@ let databaseView =[]
 
   return (
     <div className="App">
-<Options/>
+<Options filterItems={filterItems}/>
     <div className="App-items">
       {
         databaseView.map((item, index) => {
