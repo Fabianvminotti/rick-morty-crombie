@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Item from './components/Item'
+import Options from './components/options'
 
 
 
@@ -9,7 +10,8 @@ function App() {
 let databaseView =[]
   let [database, setDatabase] = useState([])
   let [lastIndex, setLastIndex] = useState(2)
-  let firstURL = 'https://rickandmortyapi.com/api/character'
+  let[firstURL,setFirstURL] = useState( 'https://rickandmortyapi.com/api/character')
+  //let firstURL = 'https://rickandmortyapi.com/api/character'
 
 
 
@@ -37,7 +39,7 @@ let databaseView =[]
 
   return (
     <div className="App">
-
+<Options/>
     <div className="App-items">
       {
         databaseView.map((item, index) => {
