@@ -13,7 +13,9 @@ return(
     <div className="op-container">
         <div className="op-select">
             <span>Status: </span>
-            <select name="op-status" onChange={}>
+            {/* <select name="op-status" onChange={}>  */}
+            <select name="op-status" >
+
                 <option value="" selected></option>
                 <option value="Alive" >Alive</option>
                 <option value="Dead" >Dead</option>
